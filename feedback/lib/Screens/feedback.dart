@@ -55,7 +55,7 @@ class feedback extends StatelessWidget {
             SizedBox(
               height: 20.0,
             ),
-            //buildNumberField(),
+            buildNumberField(),
             Spacer(),
             Row(
               children: <Widget>[
@@ -88,6 +88,42 @@ class feedback extends StatelessWidget {
   //     required Color color,
   //     required EdgeInsets Padding,
   //     required Text child}) {}
+}
+
+buildNumberField() {
+  return TextField(
+    style: TextStyle(color: Colors.black),
+    decoration: InputDecoration(
+      contentPadding: EdgeInsets.all(0.0),
+      prefixIcon: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          Container(
+            decoration: BoxDecoration(
+              border: Border(
+                  right: BorderSide(width: 1.0, color: Color(0xFFC5C5C5))),
+            ),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                SizedBox(
+                  width: 10.0,
+                ),
+                Text(
+                  "+94",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFFC5C5C5),
+                  ),
+                ),
+                
+              ],
+            ),
+          ),
+        ],
+      ),
+    ),
+  );
 }
 
 buildFeedbackForm() {
