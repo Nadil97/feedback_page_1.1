@@ -55,15 +55,17 @@ class feedback extends StatelessWidget {
             SizedBox(
               height: 20.0,
             ),
-            buildNumberField(),
+            //buildNumberField(),
             Spacer(),
             Row(
               children: <Widget>[
                 Expanded(
-                  child: flatButton(
-                    onpressed: () {},
-                    color: Color(0xffe5e5e5),
-                    Padding: EdgeInsets.all(16.0),
+                  child: TextButton(
+                    // onpressed: () {},
+
+                    onPressed: () {},
+                    // color: Color(0xffe5e5e5),
+                    // Padding: EdgeInsets.all(16.0),
                     child: Text(
                       "SUBMIT",
                       style: TextStyle(
@@ -80,6 +82,12 @@ class feedback extends StatelessWidget {
       ),
     );
   }
+
+  // flatButton(
+  //     {required Null Function() onpressed,
+  //     required Color color,
+  //     required EdgeInsets Padding,
+  //     required Text child}) {}
 }
 
 buildFeedbackForm() {
@@ -99,11 +107,38 @@ buildFeedbackForm() {
         ),
         Align(
           alignment: Alignment.bottomCenter,
-          child: Container(decoration: BoxDecoration(
-            border: Border(
-              top: 
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border(
+                top: BorderSide(width: 1.0, color: Color(0xffa6a6a6)),
+              ),
             ),
-          ),),
+            padding: EdgeInsets.all(8.0),
+            child: Row(children: <Widget>[
+              Container(
+                decoration: BoxDecoration(
+                  color: Color(0xffc5c5c5),
+                  borderRadius: BorderRadius.circular(5.0),
+                ),
+                child: Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Icon(
+                    Icons.add,
+                    color: Color(0xffc5c5c5),
+                  ),
+                ),
+              ),
+              SizedBox(
+                width: 10.0,
+              ),
+              Text(
+                "Upload Screenshot (optional)",
+                style: TextStyle(
+                  color: Color.fromARGB(255, 80, 5, 219),
+                ),
+              )
+            ]),
+          ),
         ),
       ],
     ),
