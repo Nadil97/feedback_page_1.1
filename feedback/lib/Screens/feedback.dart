@@ -116,12 +116,27 @@ buildNumberField() {
                     color: Color(0xFFC5C5C5),
                   ),
                 ),
-                
+                Icon(
+                  Icons.arrow_drop_down,
+                  color: Colors.cyan,
+                ),
+                SizedBox(
+                  width: 10.0,
+                )
               ],
             ),
           ),
+          SizedBox(
+            width: 10.0,
+          ),
         ],
       ),
+      hintStyle: TextStyle(
+        fontSize: 14.0,
+        color: Color(0xFFC5C5C5),
+      ),
+      hintText: "Phone Number",
+      border: OutlineInputBorder(),
     ),
   );
 }
