@@ -15,9 +15,16 @@ class feedback extends StatelessWidget {
           "Feedback",
           style: TextStyle(color: Colors.black, fontWeight: FontWeight.normal),
         ),
-        leading: IconButton(),
+        leading: IconButton(
+          onPressed: () {
+            {}
+          },
+          icon: Icon(Icons.arrow_back),
+        ),
       ),
-      body: Container(),
+      body: Padding(
+        padding: EdgeInsets.all(16.0),
+      ),
     );
   }
 }
