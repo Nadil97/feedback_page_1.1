@@ -89,6 +89,21 @@ buildFeedbackForm() {
       children: <Widget>[
         TextField(
           maxLines: 10,
+          decoration: InputDecoration(
+            hintText: "please briefly describe  the issue",
+            hintStyle: TextStyle(fontSize: 13.0, color: Color(0xffc5c5c5)),
+            border: OutlineInputBorder(
+              borderSide: BorderSide(color: Color(0xffc5c5c5)),
+            ),
+          ),
+        ),
+        Align(
+          alignment: Alignment.bottomCenter,
+          child: Container(decoration: BoxDecoration(
+            border: Border(
+              top: 
+            ),
+          ),),
         ),
       ],
     ),
